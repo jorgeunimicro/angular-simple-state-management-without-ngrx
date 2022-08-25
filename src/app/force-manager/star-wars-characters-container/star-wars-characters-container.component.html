@@ -1,0 +1,20 @@
+<h1>Force Mananger 💪</h1>
+
+<app-error-presentation
+  [error]="error$ | async"
+  (clearError)="onClearError()"
+></app-error-presentation>
+<app-star-wars-characters-list-presentation
+  [characters]="characters$ | async"
+  [siths]="siths$ | async"
+  [jedis]="jedis$ | async"
+  [selectedCharacter]="selectedCharacter$ | async"
+  (select)="onSelect($event)"
+  (toJedi)="onToJedi($event)"
+  (toSith)="onToSith($event)"
+  (removeForce)="onRemoveForce($event)"
+></app-star-wars-characters-list-presentation>
+<app-star-wars-character-editor-presentation
+  [character]="selectedCharacter$ | async"
+  (changeName)="onChangeName($event)"
+></app-star-wars-character-editor-presentation>

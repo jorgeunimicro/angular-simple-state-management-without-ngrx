@@ -1,0 +1,9 @@
+<div *ngIf="character; else nocharacter">
+  <h2>Selected character</h2>
+  <p>Name: {{ character.name }}</p>
+  <input type="text" [(ngModel)]="name" />
+  <button (click)="changeName.emit({character, name})">Update</button>
+</div>
+<ng-template #nocharacter>
+  <h3>Select a character to edit</h3>
+</ng-template>

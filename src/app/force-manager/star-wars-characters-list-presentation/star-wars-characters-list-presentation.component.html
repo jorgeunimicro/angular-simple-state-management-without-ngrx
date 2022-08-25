@@ -1,0 +1,22 @@
+<table>
+  <tr *ngFor="let character of characters">
+    <td>
+      {{ character.name }} {{ character | isSith: siths }}
+      {{ character | isJedi: jedis }}
+    </td>
+    <td>
+      <button (click)="select.emit(character)">👉​ select</button>
+    </td>
+    <td>
+      <button (click)="toJedi.emit(character)">⭐ Promote to Jedi</button>
+    </td>
+    <td>
+      <button (click)="toSith.emit(character)">⚫ Move To The Dark Side</button>
+    </td>
+    <td>
+      <button (click)="removeForce.emit(character)">
+        🤓 Remove Force From
+      </button>
+    </td>
+  </tr>
+</table>

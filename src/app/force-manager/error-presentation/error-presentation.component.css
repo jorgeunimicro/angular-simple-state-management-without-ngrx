@@ -1,0 +1,12 @@
+.error {
+  margin: 1rem;
+  padding: 1rem;
+  border: 1px solid red;
+  background-color: #ffc7ca;
+  display: flex;
+  justify-content: space-between;
+}
+.close {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
